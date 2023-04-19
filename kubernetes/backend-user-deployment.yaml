@@ -1,15 +1,18 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: backend-user
+    app: backend-user
   name: backend-user
 spec:
-  replicas: 1
+  replicas: 2
+  selector: 
+    matchLabels: 
+      app: backend-user
   template:
     metadata:
       labels:
-        service: backend-user
+        app: backend-user
     spec:
       containers:
       - image: baovqq/api-user
@@ -17,10 +20,8 @@ spec:
         imagePullPolicy: Always  
         resources:
           requests:
-            memory: "64Mi"
             cpu: "250m"
-          limits:
-            memory: "1024Mi"
+          limits:            
             cpu: "500m"      
         env:
         - name: URL
