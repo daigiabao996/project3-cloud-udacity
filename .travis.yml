@@ -7,20 +7,20 @@ services:
 ​
 script:
 
-  - docker build -t udagram-api-feed:v3a ./udagram-api-feed
-  - docker build -t udagram-api-user:v3a ./udagram-api-user
-  - docker build -t udagram-frontend:v3a ./udagram-frontend
-  - docker build -t reverseproxy:v3a ./udagram-reverseproxy  
+  #- docker build -t udagram-api-feed:v3a ./udagram-api-feed
+  #- docker build -t udagram-api-user:v3a ./udagram-api-user
+  - docker build -t udagram-frontend:v3b ./udagram-frontend
+  #- docker build -t reverseproxy:v3a ./udagram-reverseproxy  
 
 
-  - docker tag udagram-api-feed:v3a baovqq/api-feed:v3a
-  - docker tag udagram-api-user:v3a baovqq/api-user:v3a
-  - docker tag udagram-frontend:v3a baovqq/front-end:v3a
-  - docker tag reverseproxy:v3a baovqq/reverseproxy:v3a
+  #- docker tag udagram-api-feed:v3a baovqq/api-feed:v3a
+  #- docker tag udagram-api-user:v3a baovqq/api-user:v3a
+  - docker tag udagram-frontend:v3b baovqq/front-end:v3b
+  #- docker tag reverseproxy:v3a baovqq/reverseproxy:v3a
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push baovqq/reverseproxy:v3a
-  - docker push baovqq/api-user:v3a
-  - docker push baovqq/api-feed:v3a
-  - docker push baovqq/front-end:v3a
+  #- docker push baovqq/reverseproxy:v3a
+  #- docker push baovqq/api-user:v3a
+  #- docker push baovqq/api-feed:v3a
+  - docker push baovqq/front-end:v3b

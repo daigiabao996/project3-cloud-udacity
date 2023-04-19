@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
         - name: backend-feed
-          image: baovqq/api-feed:v2a
+          image: baovqq/api-feed:v3a
           imagePullPolicy: Always          
           resources:
             requests:            

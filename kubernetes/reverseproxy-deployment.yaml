@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: baovqq/reverseproxy:v2a
+        image: baovqq/reverseproxy:v3a
         ports:
         - containerPort: 8080
         resources:
