@@ -19,4 +19,4 @@ kubectl apply -f reverseproxy-service.yaml
 
 kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproy
 
-kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicfontend
+kubectl expose deployment frontend --type=LoadBalancer --name=publicfontend1

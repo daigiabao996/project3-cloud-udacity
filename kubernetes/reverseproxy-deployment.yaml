@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: reverseproxy
   labels:
     app: reverseproxy
-  name: reverseproxy
 spec:
   replicas: 2
   selector:
@@ -15,16 +15,12 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - image: baovqq/reverseproxy:v2a
-        name: reverseproxy
-        imagePullPolicy: Always          
-        resources:
-          requests:            
-            cpu: "250m"
-          limits:            
-            cpu: "500m"       
+      - name: reverseproxy
+        image: baovqq/reverseproxy:v2a
         ports:
         - containerPort: 8080
-      restartPolicy: Always
-
-
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 500m
