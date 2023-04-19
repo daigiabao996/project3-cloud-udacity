@@ -9,7 +9,7 @@ script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build --parallel
   - docker tag reverseproxy:v2 baovqq/reverseproxy:v2
-  - docker tag udagram-api-fee:v2 baovqq/api-feed:v2
+  - docker tag udagram-api-feed:v2 baovqq/api-feed:v2
   - docker tag udagram-api-user:v2 baovqq/api-user:v2
   - docker tag udagram-frontend:v2 baovqq/front-end:v2
 ​
