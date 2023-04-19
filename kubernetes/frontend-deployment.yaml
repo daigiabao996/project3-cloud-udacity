@@ -16,7 +16,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: baovqq/front-end:v2
+      - image: baovqq/front-end:v2a
         name: frontend
         imagePullPolicy: Always          
         ports:

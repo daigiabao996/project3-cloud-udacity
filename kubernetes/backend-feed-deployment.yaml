@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: baovqq/api-feed:v2
+      - image: baovqq/api-feed:v2a
         name: backend-feed
         imagePullPolicy: Always  
         resources:
@@ -74,7 +74,7 @@ spec:
           mountPath: "/root/.aws/"
           readOnly: true        
       restartPolicy: Always
-      volume
+      volumes:
       - name: aws-secret
         secret:
           secretName: aws-secret       
