@@ -11,4 +11,4 @@ data:
   POSTGRESS_HOST: udagram.cbccfm7eeich.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100  
 metadata:
-  name: env-config
+  name: map-config

@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: baovqq/api-feed
+      - image: baovqq/api-feed:v2
         name: backend-feed
         imagePullPolicy: Always  
         resources:
@@ -27,37 +27,37 @@ spec:
         - name: URL
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: URL
         - name: AWS_BUCKET
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: AWS_BUCKET
         - name: AWS_PROFILE
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: AWS_PROFILE
         - name: AWS_REGION
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: AWS_REGION
         - name: JWT_SECRET
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: JWT_SECRET
         - name: POSTGRESS_DB
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: POSTGRESS_DB
         - name: POSTGRESS_HOST
           valueFrom:
             configMapKeyRef:
-              name: env-config
+              name: map-config
               key: POSTGRESS_HOST
         - name: POSTGRESS_PASSWORD
           valueFrom:
@@ -74,7 +74,7 @@ spec:
           mountPath: "/root/.aws/"
           readOnly: true        
       restartPolicy: Always
-      volumes:
+      volume
       - name: aws-secret
         secret:
           secretName: aws-secret       

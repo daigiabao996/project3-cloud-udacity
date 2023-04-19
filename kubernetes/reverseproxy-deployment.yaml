@@ -15,15 +15,13 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - image: baovqq/reverseproxy
+      - image: baovqq/reverseproxy:v2
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
-          requests:
-            memory: "64Mi"
+          requests:            
             cpu: "250m"
-          limits:
-            memory: "1024Mi"
+          limits:            
             cpu: "500m"       
         ports:
         - containerPort: 8080
