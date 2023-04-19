@@ -8,14 +8,14 @@ services:
 script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build --parallel
-  - docker tag reverseproxy baovqq/reverseproxy:latest
-  - docker tag udagram-api-feed baovqq/api-feed:latest
-  - docker tag udagram-api-user baovqq/api-user:latest
-  - docker tag udagram-frontend baovqq/front-end:latest
+  - docker tag reverseproxy:v2 baovqq/reverseproxy:v2
+  - docker tag udagram-api-fee:v2 baovqq/api-feed:v2
+  - docker tag udagram-api-user:v2 baovqq/api-user:v2
+  - docker tag udagram-frontend:v2 baovqq/front-end:v2
 ​
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push baovqq/reverseproxy
-  - docker push baovqq/api-user
-  - docker push baovqq/api-feed
-  - docker push baovqq/front-end
+  - docker push baovqq/reverseproxy:v2
+  - docker push baovqq/api-user:v2
+  - docker push baovqq/api-feed:v2
+  - docker push baovqq/front-end:v2
