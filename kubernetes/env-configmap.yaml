@@ -3,13 +3,13 @@ kind: ConfigMap
 metadata:
   name: config-secret
 data:
-  AWS_BUCKET: project3-baovqq
+  AWS_BUCKET: project3-udacity
   AWS_PROFILE: default
   AWS_REGION: us-east-1
   JWT_SECRET: testing
   POSTGRES_DB: postgres
   POSTGRES_USERNAME: postgres
-  POSTGRES_PASSWORD: '123456789'
+  POSTGRES_PASSWORD: bao12345
   POSTGRES_HOST: udagram.cbccfm7eeich.us-east-1.rds.amazonaws.com               
   URL: http://localhost:8100
 
