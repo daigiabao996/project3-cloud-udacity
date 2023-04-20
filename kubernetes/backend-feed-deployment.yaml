@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
         - name: backend-feed
-          image: baovqq/feed:v6
+          image: baovqq/feed:v7
           imagePullPolicy: Always          
           resources:
             requests:            
@@ -25,7 +25,7 @@ spec:
               cpu: 500m                      
           envFrom:
             - secretRef:
-                name: config-secret
+                name: env-secret
             - secretRef:
                 name: aws-secret
             - configMapRef:
