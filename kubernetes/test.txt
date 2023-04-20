@@ -17,6 +17,14 @@ kubectl apply -f backend-user-service.yaml
 kubectl apply -f frontend-service.yaml
 kubectl apply -f reverseproxy-service.yaml
 
-kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproy
+kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproxy
 
 kubectl expose deployment frontend --type=LoadBalancer --name=publicfontend
+
+kubectl set image deployment frontend frontend=baovqq/front-end:v3b
+
+export AWS_ACCESS_KEY_ID=ASIAYWAYVOX2AKJYBZH4
+export AWS_SECRET_ACCESS_KEY=zernNw79k0leNWmjq6VHa92KLCIjShvzFSJ0k2oG
+export AWS_DEFAULT_REGION=us-west-2
+
+FwoGZXIvYXdzEJz//////////wEaDJwpgh5eDwP8h9gu6SLVAaOO/DWB+Amm+gAOlhEw3slJpCe4JTeY6Ioj2cI4AhJDQEZl69N0IOl7ufgS3VHdZJ/yEwkAQqzbXQLx2UThDhGfHKAFxTAUNCfN5n/G1OdyaFb3TYRAjd4D/QTvfDjTJvzbg+6HUWqojfTAN6KEq/aKKoq9581FduVlcw/3rM2jZs5y6OtVlxCB6nzhnMv66xATl3iRV3SNlxsrzxQsvwckJoYWTIKlOkHalF2/g2757x9DPZExsMPRy9MXP06JftegHVLrkdW59RWEucbrcChToNAN8CiRw4KiBjItUYYZ9m/WpcM2VShLmifeu02Oo8aBg3V/TA0nf7lhxyXYK8PlEQ9EuzAkIUap
