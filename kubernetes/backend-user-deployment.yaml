@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
         - name: backend-user
-          image: baovqq/api-user:v1
+          image: baovqq/user:v5
           imagePullPolicy: Always
           resources:
             requests:            
