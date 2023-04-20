@@ -9,7 +9,7 @@ script:
 
   #- docker build -t udagram-api-feed:v3a ./udagram-api-feed
   #- docker build -t udagram-api-user:v3a ./udagram-api-user
-  - docker build -t udagram-frontend:v3c./udagram-frontend
+  - docker build -t udagram-frontend:v3c ./udagram-frontend
   #- docker build -t reverseproxy:v3a ./udagram-reverseproxy  
 
 
