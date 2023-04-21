@@ -9,12 +9,12 @@ script:
 
   #- docker build -t feed:v1 ./udagram-api-feed
   #- docker build -t user:v1 ./udagram-api-user
-  - docker build -t frontend:v1b ./udagram-frontend
+  - docker build -t frontend:v1c ./udagram-frontend
   #- docker build -t reverseproxy:v1 ./udagram-reverseproxy  
 
   #- docker tag feed:v1 baovqq/feed:v1
   #- docker tag user:v1 baovqq/user:v1
-  - docker tag frontend:v1b baovqq/frontend:v1b
+  - docker tag frontend:v1c baovqq/frontend:v1c
   #- docker tag reverseproxy:v1 baovqq/reverseproxy:v1
 
 after_success:
@@ -22,4 +22,4 @@ after_success:
   #- docker push baovqq/reverseproxy:v1
   #- docker push baovqq/user:v1
   #- docker push baovqq/feed:v1
-  - docker push baovqq/frontend:v1b
+  - docker push baovqq/frontend:v1c
