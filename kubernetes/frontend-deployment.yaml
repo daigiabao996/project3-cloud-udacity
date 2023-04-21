@@ -16,7 +16,7 @@ spec:
     spec:      
       containers:
       - name: frontend
-        image: baovqq/frontend:v1
+        image: baovqq/frontend:v1a
         imagePullPolicy: Always        
         resources:
           limits:
