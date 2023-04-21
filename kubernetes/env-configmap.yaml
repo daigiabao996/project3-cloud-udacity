@@ -11,5 +11,5 @@ data:
   POSTGRES_USERNAME: postgres
   POSTGRES_PASSWORD: bao12345
   POSTGRES_HOST: udagram.cbccfm7eeich.us-east-1.rds.amazonaws.com               
-  URL: a821631b5de554d5ca1bec22f7713800-577240949.us-east-1.elb.amazonaws.com:8100
+  URL: http://a821631b5de554d5ca1bec22f7713800-577240949.us-east-1.elb.amazonaws.com:8100
 
