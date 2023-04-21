@@ -15,7 +15,7 @@ script:
   #- docker tag feed:v1 baovqq/feed:v1
   #- docker tag user:v1 baovqq/user:v1
   #- docker tag frontend:v1c baovqq/frontend:v1c
-  - docker tag reverseproxy:v1 baovqq/reverseproxy:v1a
+  - docker tag reverseproxy:v1a baovqq/reverseproxy:v1a
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
